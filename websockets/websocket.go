@@ -4,29 +4,32 @@ import (
 	"fmt"
 	"net/http"
 
-	"websocket"
+	"github.com/gorilla/websocket"
 )
 
-func websocketHandler(ws *websocket.Conn) {
+func wsEndpoint(w http.ResponseWriter, r *http.Request) {
+	// upgrading connection to websocket
+	conn, err := websocket.Upgrade(w, r, nil, 1024, 1024)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// Listen for messages from the client
 	for {
-		// read a message from web socket connection
-		messageType, message, err := ws.ReadMessage()
+		// Read a message from the client
+		msgType, _, err := conn.ReadMessage()
 		if err != nil {
-			break
+			fmt.Println(err)
+			return
 		}
 
-		// print message
-		fmt.Println(message)
-
-		// send message back to websocket connection
-		err = ws.WriteMessage(messageType, message)
-		if err != nil {
-			break
-		}
+		// echo the message back to the client
+		conn.WriteMessage(msgType, []byte("Hello from the server!"))
 	}
 }
 
 func main() {
-	// listen for websocket connections on port 8080
-	http.HandleFunc("/websocket", websocketHandler)
+	http.HandleFunc("/ws", wsEndpoint)
+	http.ListenAndServe(":8080", nil)
 }
