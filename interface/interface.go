@@ -37,3 +37,5 @@ func main() {
 	s = Circle{Radius: 2}
 	fmt.Println("Area of Circle:", s.Area()) // Output: Area of Circle: 12.56
 }
+
+// improve this code
