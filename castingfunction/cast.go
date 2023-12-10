@@ -14,10 +14,18 @@ func (p Person) SayHello() {
 }
 
 func (h Hamza) SayGoodbye() {
-	// Check if h is a Person struct.
-	if h, ok := h.(Person); ok {
-		// Cast h to a Person struct and call the SayHello() method on it.
-		h.SayHello()
+	// This method tries to assert if h is of type Person.
+	// If it is, it will call the SayHello() method.
+	if person, ok := interface{}(h).(Person); ok {
+		person.SayHello()
+	} else {
+		fmt.Println("I am not a Person.")
+	}
+
+	if person1, ok := interface{}(h).(Person); ok {
+		person1.SayHello()
+	} else {
+		fmt.Println("I am not a Person.")
 	}
 }
 
