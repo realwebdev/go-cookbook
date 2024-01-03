@@ -1,0 +1,23 @@
+  tls-keys-2025 terminates 
+Rules:
+  Host        Path  Backends                                                                      Github URL                                                                                                           Name
+  ----        ----  --------                                                                      ----------                                                                                                           -----
+  *           
+              /api/1.0/*                   dashboard-api:80 (10.8.45.10:80)                    https://github.com/websays-intelligence/dashboard-api/                                                                dashboard-api 
+              /authz/*                     authz:80 (10.8.48.26:9090)                          https://github.com/websays-intelligence/authz/                                                                        authz
+              /api/2.0/wadmin/*            wadmin:80 (10.8.47.216:8090,10.9.228.203:8090)      https://github.com/websays-intelligence/wapi/tree/master/cmd/wadmin/                                                  wadmin
+              /external/authz/*            externalauthz:80 (10.10.99.5:9090)                  https://github.com/websays-intelligence/authz                                                                         authz
+              /api/2.0/external/*          externaloauth:80 (10.8.45.171:8091)                 https://github.com/websays-intelligence/wapi/blob/5770c09f9826ea61e4c4b2fd0e50dd4bc5ef3514/cmd/externaloauth/         externaloauth
+              /api/2.0/channels/*          ocapi:80 (10.8.48.3:8080)                           https://github.com/websays-intelligence/ownedchannels/blob/f0d0581c8d71ff7d6738ec2f7548e3f1d1bf650a/cmd/ocapi/        ocapi
+              /winput/*                    winputapi:80 (10.8.50.141:8080)                     https://github.com/websays-intelligence/wapi/blob/5770c09f9826ea61e4c4b2fd0e50dd4bc5ef3514/cmd/inputs/winputapi/      winputapi
+              /api/2.0/pptx                pptxmaker:80 (10.8.48.27:8013)                      https://github.com/websays-intelligence/pptxmaker/blob/c72546d3d5a40d965569a4d14323e5c3f0a93e94/cmd/                  pptxmaker
+              /wapi/1.0/*                  restwapi:80 (10.8.44.7:8080,10.9.228.204:8080)      https://github.com/websays-intelligence/wapi/blob/5770c09f9826ea61e4c4b2fd0e50dd4bc5ef3514/cmd/restwapi/              restwapi
+              /zendesk/1.0/*               zdapp:80 (<error: endpoints "zdapp" not found>)     https://github.com/websays-intelligence/zdapp                                                                         zdapp
+              /api/2.0/nlp/*               nlpapi:80 (10.8.47.220:8090)                        https://github.com/websays-intelligence/wapi/blob/5770c09f9826ea61e4c4b2fd0e50dd4bc5ef3514/cmd/nlpapi/                nlpapi
+              /api/2.0/historical/*        historical-api:80 (10.8.45.18:8080)                 https://github.com/websays-intelligence/whistorical/blob/develop/cmd/api/                                             whistorical
+              /images                      images-proxy:80 (10.8.50.15:3000)                   https://github.com/websays-intelligence/images-proxy/tree/develop                                                     images-proxy
+              /bs-integrations/bsguide/*   bsguide:80 (10.8.46.16:8080)                        https://github.com/websays-intelligence/bsguideparser/blob/836e0223a79477fcbffb2e5d3b829d2e18b96c1c/cmd/bsguide/      bsguider
+
+
+
+              
