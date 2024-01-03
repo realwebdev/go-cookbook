@@ -17,6 +17,33 @@ Rules:
               /api/2.0/historical/*        historical-api:80 (10.8.45.18:8080)                 https://github.com/websays-intelligence/whistorical/blob/develop/cmd/api/                                             whistorical
               /images                      images-proxy:80 (10.8.50.15:3000)                   https://github.com/websays-intelligence/images-proxy/tree/develop                                                     images-proxy
               /bs-integrations/bsguide/*   bsguide:80 (10.8.46.16:8080)                        https://github.com/websays-intelligence/bsguideparser/blob/836e0223a79477fcbffb2e5d3b829d2e18b96c1c/cmd/bsguide/      bsguider
+                                                                                               https://github.com/websays-intelligence/wutils                                                                        wutils
+                                                                                               https://github.com/websays-intelligence/infrastructure                                                                infrastructure
+                                                                                               https://github.com/websays-intelligence/wtools                                                                        wtools
+                                                                                               https://github.com/websays-intelligence/gender                                                                        gender
+                                                                                               https://github.com/websays-intelligence/bs-cipher                                                                     bs-cipher
+                                                                                               https://github.com/websays-intelligence/bs-integrations                                                               bs-integrations
+
+https://github.com/websays-intelligence/wapi/tree/master/cmd {
+
+    alerts
+    alertsmigration
+    categorizer
+    connectors
+    emails
+    externaloauth
+    facadeapi
+    inputsnlpapi
+    processor
+    profilemigration
+    nlpapi
+    processor
+    schedular
+    restwapi
+    storers
+    topic/updater
+    wadmin
+}
 
 
 
