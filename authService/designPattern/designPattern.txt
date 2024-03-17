@@ -1,0 +1,30 @@
+The first part covers behavioural design patterns:
+
+- Chain of Responsibility Pattern
+- Command Pattern
+- Iterator Pattern
+- Mediator Pattern
+- Memento Pattern
+- Observer Pattern
+- State Pattern
+- Strategy Pattern
+- Template Method Pattern
+- Visitor Pattern
+
+The second part covers structural design patterns:
+
+- Adapter Pattern
+- Bridge Pattern
+- Composite Pattern
+- Decorator Pattern
+- Facade Pattern
+- Flyweight Pattern
+- Proxy Pattern
+
+The third part covers creational design patterns:
+
+- Prototype Pattern
+- Singleton Pattern
+- Factory Method Pattern
+- Abstract Factory Pattern
+- Builder Pattern
